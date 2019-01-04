@@ -1,0 +1,14 @@
+C:\Users\hiverma\source\repos\Practice\Recursion\bin\Debug\Recursion.exe.config
+C:\Users\hiverma\source\repos\Practice\Recursion\bin\Debug\Recursion.exe
+C:\Users\hiverma\source\repos\Practice\Recursion\bin\Debug\Recursion.pdb
+C:\Users\hiverma\source\repos\Practice\Recursion\obj\Debug\Recursion.csprojAssemblyReference.cache
+C:\Users\hiverma\source\repos\Practice\Recursion\obj\Debug\Recursion.csproj.CoreCompileInputs.cache
+C:\Users\hiverma\source\repos\Practice\Recursion\obj\Debug\Recursion.exe
+C:\Users\hiverma\source\repos\Practice\Recursion\obj\Debug\Recursion.pdb
+C:\Users\hiverma\source\repos\Code-Campaign\Recursion\bin\Debug\Recursion.exe.config
+C:\Users\hiverma\source\repos\Code-Campaign\Recursion\bin\Debug\Recursion.exe
+C:\Users\hiverma\source\repos\Code-Campaign\Recursion\bin\Debug\Recursion.pdb
+C:\Users\hiverma\source\repos\Code-Campaign\Recursion\obj\Debug\Recursion.csprojAssemblyReference.cache
+C:\Users\hiverma\source\repos\Code-Campaign\Recursion\obj\Debug\Recursion.csproj.CoreCompileInputs.cache
+C:\Users\hiverma\source\repos\Code-Campaign\Recursion\obj\Debug\Recursion.exe
+C:\Users\hiverma\source\repos\Code-Campaign\Recursion\obj\Debug\Recursion.pdb
