@@ -49,5 +49,38 @@ namespace BinaryTree
                 Console.Write($"{root.data}, ");
             }
         }
+
+        public static void LevelOrderTraversal(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else
+            {
+                List<TreeNode> queue = new List<TreeNode>();
+                queue.Add(root);
+                while (queue.Count > 0)
+                {
+                    int count = queue.Count;
+                    while (count > 0)
+                    {
+                        TreeNode node = queue.ElementAt(0);
+                        queue.RemoveAt(0);
+                        Console.Write($"{node.data}, ");
+                        if (node.left != null)
+                        {
+                            queue.Add(node.left);
+                        }
+                        if (node.right != null)
+                        {
+                            queue.Add(node.right);
+                        }
+                        count--;
+                    }
+                    Console.WriteLine();
+                }
+            }
+        }
     }
 }
