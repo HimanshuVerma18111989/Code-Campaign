@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0DF4FB9A-065A-4C95-B85A-F60AB838972C}</ProjectGuid>
+    <ProjectGuid>{356A161B-08D5-42C8-A934-480A8BA4DADC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Recursion</RootNamespace>
-    <AssemblyName>Recursion</AssemblyName>
+    <RootNamespace>BinaryTree</RootNamespace>
+    <AssemblyName>BinaryTree</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Boggle.cs" />
-    <Compile Include="KnightTour.cs" />
-    <Compile Include="NQueenProblem.cs" />
-    <Compile Include="PermutationOfStrings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RatInAMaze.cs" />
+    <Compile Include="TraversalUtil.cs" />
+    <Compile Include="TreeNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,0 +1,7 @@
+C:\Users\hiverma\source\repos\Code-Campaign\BinaryTree\bin\Debug\BinaryTree.exe.config
+C:\Users\hiverma\source\repos\Code-Campaign\BinaryTree\bin\Debug\BinaryTree.exe
+C:\Users\hiverma\source\repos\Code-Campaign\BinaryTree\bin\Debug\BinaryTree.pdb
+C:\Users\hiverma\source\repos\Code-Campaign\BinaryTree\obj\Debug\BinaryTree.csprojAssemblyReference.cache
+C:\Users\hiverma\source\repos\Code-Campaign\BinaryTree\obj\Debug\BinaryTree.csproj.CoreCompileInputs.cache
+C:\Users\hiverma\source\repos\Code-Campaign\BinaryTree\obj\Debug\BinaryTree.exe
+C:\Users\hiverma\source\repos\Code-Campaign\BinaryTree\obj\Debug\BinaryTree.pdb
