@@ -82,5 +82,32 @@ namespace BinaryTree
                 }
             }
         }
+
+        public static void InorderTraversalIterative(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else
+            {
+                Stack<TreeNode> stack = new Stack<TreeNode>();
+                TreeNode node = root;
+                while ((node!=null)||(stack.Count > 0))
+                {
+                    if (node != null)
+                    {
+                        stack.Push(node);
+                        node = node.left;
+                    }
+                    else
+                    {
+                        node = stack.Pop();
+                        Console.Write($"{node.data}, ");
+                        node = node.right;
+                    }
+                }
+            }
+        }
     }
 }
