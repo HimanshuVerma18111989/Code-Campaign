@@ -45,7 +45,16 @@ namespace BinaryTree
             root3.right.right = new TreeNode(6);
             //TraversalUtil.InorderTraversalIterative(root3);
             //TraversalUtil.PreOrderTraversal(root3);
-            TraversalUtil.PostOrderTraversalIterative(root3);
+            //TraversalUtil.PostOrderTraversalIterative(root3);
+            TreeNode root4 = new TreeNode(1);
+            root4.left = new TreeNode(2);
+            root4.right = new TreeNode(3);
+            root4.left.left = new TreeNode(4);
+            root4.left.right = new TreeNode(5);
+            root4.right.left = new TreeNode(6);
+            root4.right.right = new TreeNode(7);
+            root4.right.left.right = new TreeNode(8);
+            TraversalUtil.VerticalOrderTraversal(root4);
             Console.ReadLine();
         }
     }
