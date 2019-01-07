@@ -44,7 +44,8 @@ namespace BinaryTree
             root3.left.left.left = new TreeNode(7);
             root3.right.right = new TreeNode(6);
             //TraversalUtil.InorderTraversalIterative(root3);
-            TraversalUtil.PreOrderTraversal(root3);
+            //TraversalUtil.PreOrderTraversal(root3);
+            TraversalUtil.PostOrderTraversalIterative(root3);
             Console.ReadLine();
         }
     }

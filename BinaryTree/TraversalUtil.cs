@@ -135,5 +135,38 @@ namespace BinaryTree
                 }
             }
         }
+
+        public static void PostOrderTraversalIterative(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else
+            {
+                Stack<TreeNode> stack1 = new Stack<TreeNode>();
+                Stack<TreeNode> stack2 = new Stack<TreeNode>();
+                TreeNode node = root;
+                while ((node != null) || (stack1.Count > 0))
+                {
+                    if (node != null)
+                    {
+                        stack2.Push(node);
+                        stack1.Push(node);
+                        node = node.right;
+                    }
+                    else
+                    {
+                        node = stack1.Pop();
+                        node = node.left;
+                    }
+                }
+                while (stack2.Count > 0)
+                {
+                    TreeNode element = stack2.Pop();
+                    Console.Write($"{element.data}, ");
+                }
+            }
+        }
     }
 }
