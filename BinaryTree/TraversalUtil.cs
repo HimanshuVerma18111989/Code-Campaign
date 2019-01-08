@@ -259,5 +259,37 @@ namespace BinaryTree
                 }
             }
         }
+
+        public static void BottomViewOfBinaryTree(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else
+            {
+                SortedDictionary<int, TreeNode> disMap = new SortedDictionary<int, TreeNode>();
+                List<Obj> queue = new List<Obj>();
+                queue.Add(new Obj(root, 0));
+                while (queue.Count > 0)
+                {
+                    Obj ele = queue.ElementAt(0);
+                    queue.RemoveAt(0);
+                    disMap[ele.dis] = ele.node;
+                    if (ele.node.left != null)
+                    {
+                        queue.Add(new Obj(ele.node.left, ele.dis - 1));
+                    }
+                    if (ele.node.right != null)
+                    {
+                        queue.Add(new Obj(ele.node.right, ele.dis + 1));
+                    }
+                }
+                foreach (int dis in disMap.Keys)
+                {
+                    Console.Write($"{disMap[dis].data}, ");
+                }
+            }
+        }
     }
 }
