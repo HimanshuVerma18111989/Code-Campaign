@@ -58,7 +58,8 @@ namespace BinaryTree
             //TraversalUtil.TopViewOfBinaryTree(root4);
             //TraversalUtil.BottomViewOfBinaryTree(root4);
             //TraversalUtil.LeftViewOfBinaryTree(root4);
-            TraversalUtil.RightViewOfBinaryTree(root4);
+            //TraversalUtil.RightViewOfBinaryTree(root4);
+            TraversalUtil.DiagonalTraversal(root4);
             Console.ReadLine();
         }
     }

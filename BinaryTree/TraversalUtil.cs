@@ -366,7 +366,53 @@ namespace BinaryTree
                     // Console.WriteLine();
                 }
             }
+        }
 
+        public static void DiagonalTraversal(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else
+            {
+                SortedDictionary<int, List<TreeNode>> disMap = new SortedDictionary<int, List<TreeNode>>();
+                List<Obj> queue = new List<Obj>();
+                queue.Add(new Obj(root, 0));
+                while (queue.Count > 0)
+                {
+                    Obj ele = queue.ElementAt(0);
+                    queue.RemoveAt(0);
+                    if (disMap.ContainsKey(ele.dis))
+                    {
+                        disMap[ele.dis].Add(ele.node);
+                    }
+                    else
+                    {
+                        disMap[ele.dis] = new List<TreeNode>()
+                        {
+                            ele.node
+                        };
+                    }
+                    if (ele.node.left != null)
+                    {
+                        queue.Add(new Obj(ele.node.left, ele.dis + 1));
+                    }
+                    if (ele.node.right != null)
+                    {
+                        queue.Add(new Obj(ele.node.right, ele.dis));
+                    }
+                }
+                foreach (int dis in disMap.Keys)
+                {
+                    List<TreeNode> nodeList = disMap[dis];
+                    foreach (TreeNode n in nodeList)
+                    {
+                        Console.Write($"{n.data}, ");
+                    }
+                    Console.WriteLine();
+                }
+            }
         }
     }
 }
