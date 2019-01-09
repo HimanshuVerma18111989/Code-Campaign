@@ -291,5 +291,82 @@ namespace BinaryTree
                 }
             }
         }
+        public static void LeftViewOfBinaryTree(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else
+            {
+                List<TreeNode> queue = new List<TreeNode>();
+                queue.Add(root);
+                while (queue.Count > 0)
+                {
+                    int count = queue.Count;
+                    int queueCount = queue.Count;
+                    while (count > 0)
+                    {
+                        TreeNode node = queue.ElementAt(0);
+                        queue.RemoveAt(0);
+                        if (count == queueCount)
+                        {
+                            Console.Write($"{node.data}, ");
+                        }
+                        
+                        if (node.left != null)
+                        {
+                            queue.Add(node.left);
+                        }
+                        if (node.right != null)
+                        {
+                            queue.Add(node.right);
+                        }
+                        count--;
+                    }
+                   // Console.WriteLine();
+                }
+            }
+
+        }
+
+        public static void RightViewOfBinaryTree(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else
+            {
+                List<TreeNode> queue = new List<TreeNode>();
+                queue.Add(root);
+                while (queue.Count > 0)
+                {
+                    int count = queue.Count;
+                    int queueCount = queue.Count;
+                    while (count > 0)
+                    {
+                        TreeNode node = queue.ElementAt(0);
+                        queue.RemoveAt(0);
+                        if (count == 1)
+                        {
+                            Console.Write($"{node.data}, ");
+                        }
+
+                        if (node.left != null)
+                        {
+                            queue.Add(node.left);
+                        }
+                        if (node.right != null)
+                        {
+                            queue.Add(node.right);
+                        }
+                        count--;
+                    }
+                    // Console.WriteLine();
+                }
+            }
+
+        }
     }
 }

@@ -56,7 +56,9 @@ namespace BinaryTree
             root4.right.left.right = new TreeNode(8);
             //TraversalUtil.VerticalOrderTraversal(root4);
             //TraversalUtil.TopViewOfBinaryTree(root4);
-            TraversalUtil.BottomViewOfBinaryTree(root4);
+            //TraversalUtil.BottomViewOfBinaryTree(root4);
+            //TraversalUtil.LeftViewOfBinaryTree(root4);
+            TraversalUtil.RightViewOfBinaryTree(root4);
             Console.ReadLine();
         }
     }
