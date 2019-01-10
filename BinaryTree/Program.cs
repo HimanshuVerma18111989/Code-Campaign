@@ -59,7 +59,17 @@ namespace BinaryTree
             //TraversalUtil.BottomViewOfBinaryTree(root4);
             //TraversalUtil.LeftViewOfBinaryTree(root4);
             //TraversalUtil.RightViewOfBinaryTree(root4);
-            TraversalUtil.DiagonalTraversal(root4);
+            //TraversalUtil.DiagonalTraversal(root4);
+
+            TreeNode root5 = new TreeNode(1);
+            root5.left = new TreeNode(2);
+            root5.right = new TreeNode(6);
+            root5.left.left = new TreeNode(3);
+            root5.left.right = new TreeNode(4);
+            root5.left.right.right = new TreeNode(5);
+
+            int height = CoreUtil.HeightBinaryTree(root5);
+            Console.Write($"Height: {height}");
             Console.ReadLine();
         }
     }
