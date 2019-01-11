@@ -71,9 +71,11 @@ namespace BinaryTree
             //int height = CoreUtil.HeightBinaryTree(root5);
             //Console.Write($"Height: {height}");
             //Console.WriteLine();
-            int nodes = CoreUtil.NodesInBinaryTreeIterative(root5);
-            Console.WriteLine($"Number of nodes: {nodes}");
-            Console.WriteLine($"Number of nodes: {CoreUtil.NodesInBinaryTreeRecursive(root5)}");
+            //int nodes = CoreUtil.NodesInBinaryTreeIterative(root5);
+            //Console.WriteLine($"Number of nodes: {nodes}");
+            //Console.WriteLine($"Number of nodes: {CoreUtil.NodesInBinaryTreeRecursive(root5)}");
+            Console.WriteLine($"Number of Leafs: {CoreUtil.LeafNodeIterative(root5)}");
+            Console.WriteLine($"Number of Leafs: {CoreUtil.LeafsInBinaryTreeRecursive(root5)}");
             Console.ReadLine();
         }
     }

@@ -63,5 +63,55 @@ namespace BinaryTree
                 return countl + countr + 1;
             }
         }
+
+        public static int LeafNodeIterative(TreeNode root)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+            else
+            {
+                Queue<TreeNode> queue = new Queue<TreeNode>();
+                queue.Enqueue(root);
+                int count = 0;
+                while (queue.Count > 0)
+                {
+                    TreeNode node = queue.Dequeue();
+                    if ((node.left == null) && (node.right == null))
+                    {
+                        count++;
+                    }
+                    
+                    if (node.left != null)
+                    {
+                        queue.Enqueue(node.left);
+                    }
+                    if (node.right != null)
+                    {
+                        queue.Enqueue(node.right);
+                    }
+                }
+                return count;
+            }
+        }
+
+        public static int LeafsInBinaryTreeRecursive(TreeNode root)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+            else if ((root.left == null) && (root.right == null))
+            {
+                return 1;
+            }
+            else
+            {
+                int countl = LeafsInBinaryTreeRecursive(root.left);
+                int countr = LeafsInBinaryTreeRecursive(root.right);
+                return countl + countr;
+            }
+        }
     }
 }
