@@ -414,5 +414,60 @@ namespace BinaryTree
                 }
             }
         }
+        public static void PrintLeftNodesExceptLeafNode(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else if ((root.left == null) && (root.right == null))
+            {
+                return;
+            }
+            else
+            {
+                Console.Write($"{root.data}, ");
+                PrintLeftNodesExceptLeafNode(root.left);
+            }
+        }
+
+        public static void PrintLeafOfBinaryTree(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else if ((root.left == null) && (root.right == null))
+            {
+                Console.Write($"{root.data}, ");
+            }
+            else
+            {
+                PrintLeafOfBinaryTree(root.left);
+                PrintLeafOfBinaryTree(root.right);
+            }
+        }
+        public static void PrintRightNodeExceptLeaf(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else if ((root.left == null) && (root.right == null))
+            {
+                return;
+            }
+            else
+            {
+                PrintRightNodeExceptLeaf(root.right);
+                Console.Write($"{root.data}, ");
+            }
+        }
+        public static void BoundaryTraversalOfBinaryTree(TreeNode root)
+        {
+            PrintLeftNodesExceptLeafNode(root);
+            PrintLeafOfBinaryTree(root);
+            PrintRightNodeExceptLeaf(root.right);
+        }
     }
 }

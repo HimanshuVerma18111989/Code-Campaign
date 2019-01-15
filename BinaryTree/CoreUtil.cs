@@ -113,5 +113,20 @@ namespace BinaryTree
                 return countl + countr;
             }
         }
+        public static void MirrorOfBinaryTree(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else
+            {
+                MirrorOfBinaryTree(root.left);
+                MirrorOfBinaryTree(root.right);
+                TreeNode temp = root.left;
+                root.left = root.right;
+                root.right = temp;
+            }
+        }
     }
 }

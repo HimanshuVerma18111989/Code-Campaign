@@ -74,8 +74,22 @@ namespace BinaryTree
             //int nodes = CoreUtil.NodesInBinaryTreeIterative(root5);
             //Console.WriteLine($"Number of nodes: {nodes}");
             //Console.WriteLine($"Number of nodes: {CoreUtil.NodesInBinaryTreeRecursive(root5)}");
-            Console.WriteLine($"Number of Leafs: {CoreUtil.LeafNodeIterative(root5)}");
-            Console.WriteLine($"Number of Leafs: {CoreUtil.LeafsInBinaryTreeRecursive(root5)}");
+            //Console.WriteLine($"Number of Leafs: {CoreUtil.LeafNodeIterative(root5)}");
+            //Console.WriteLine($"Number of Leafs: {CoreUtil.LeafsInBinaryTreeRecursive(root5)}");
+
+            TreeNode root6 = new TreeNode(1);
+            root6.left = new TreeNode(2);
+            root6.right = new TreeNode(3);
+            root6.left.left = new TreeNode(4);
+            root6.left.right = new TreeNode(5);
+            root6.left.right.right = new TreeNode(6);
+            root6.right.right = new TreeNode(7);
+            root6.right.right.right = new TreeNode(8);
+            //TraversalUtil.BoundaryTraversalOfBinaryTree(root6);
+            TraversalUtil.InOrderTraversal(root6);
+            CoreUtil.MirrorOfBinaryTree(root6);
+            Console.WriteLine();
+            TraversalUtil.InOrderTraversal(root6);
             Console.ReadLine();
         }
     }
