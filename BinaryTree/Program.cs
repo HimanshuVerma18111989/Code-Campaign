@@ -83,13 +83,17 @@ namespace BinaryTree
             root6.left.left = new TreeNode(4);
             root6.left.right = new TreeNode(5);
             root6.left.right.right = new TreeNode(6);
+            root6.left.right.left = new TreeNode(17);
+            root6.left.right.left.left = new TreeNode(19);
+            root6.right.left = new TreeNode(18);
             root6.right.right = new TreeNode(7);
             root6.right.right.right = new TreeNode(8);
             //TraversalUtil.BoundaryTraversalOfBinaryTree(root6);
-            TraversalUtil.InOrderTraversal(root6);
-            CoreUtil.MirrorOfBinaryTree(root6);
-            Console.WriteLine();
-            TraversalUtil.InOrderTraversal(root6);
+            //TraversalUtil.InOrderTraversal(root6);
+            //CoreUtil.MirrorOfBinaryTree(root6);
+            //Console.WriteLine();
+            //TraversalUtil.InOrderTraversal(root6);
+            TraversalUtil.SpiralLevelOrderTraversal(root6);
             Console.ReadLine();
         }
     }

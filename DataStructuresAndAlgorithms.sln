@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursion", "Recursion\Recu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "BinaryTree\BinaryTree.csproj", "{356A161B-08D5-42C8-A934-480A8BA4DADC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{0D5AC5E8-B15E-4DBD-9BD2-1AE7E449D4D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{356A161B-08D5-42C8-A934-480A8BA4DADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{356A161B-08D5-42C8-A934-480A8BA4DADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{356A161B-08D5-42C8-A934-480A8BA4DADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D5AC5E8-B15E-4DBD-9BD2-1AE7E449D4D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5AC5E8-B15E-4DBD-9BD2-1AE7E449D4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5AC5E8-B15E-4DBD-9BD2-1AE7E449D4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5AC5E8-B15E-4DBD-9BD2-1AE7E449D4D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

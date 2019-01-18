@@ -469,5 +469,49 @@ namespace BinaryTree
             PrintLeafOfBinaryTree(root);
             PrintRightNodeExceptLeaf(root.right);
         }
+
+        public static void SpiralLevelOrderTraversal(TreeNode root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            else
+            {
+                Stack<TreeNode> stack1 = new Stack<TreeNode>();
+                Stack<TreeNode> stack2 = new Stack<TreeNode>();
+                stack1.Push(root);
+                while ((stack1.Count > 0) || (stack2.Count > 0))
+                {
+                    while (stack1.Count > 0)
+                    {
+                        TreeNode node = stack1.Pop();
+                        Console.Write($"{node.data}, ");
+                        if (node.left != null)
+                        {
+                            stack2.Push(node.left);
+                        }
+                        if (node.right != null)
+                        {
+                            stack2.Push(node.right);
+                        }
+                                
+                    }
+                    while (stack2.Count > 0)
+                    {
+                        TreeNode node = stack2.Pop();
+                        Console.Write($"{node.data}, ");
+                        if (node.right != null)
+                        {
+                            stack1.Push(node.right);
+                        }
+                        if (node.left != null)
+                        {
+                            stack1.Push(node.left);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
