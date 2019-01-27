@@ -18,12 +18,14 @@ namespace LinkedList
             Console.WriteLine();
             //LinkedListCoreUtil.PrintLinkedList(head);
             //Console.WriteLine();
-            LinkedListCoreUtil.InsertAtEndOfList(100, head);
+            /*LinkedListCoreUtil.InsertAtEndOfList(100, head);
             LinkedListCoreUtil.PrintLinkedList(head);
             head = LinkedListCoreUtil.DeletionOfFrontNode(head);
             LinkedListCoreUtil.PrintLinkedList(head);
             Console.WriteLine();
             head = LinkedListCoreUtil.DeletionOfLastNode(head);
+            LinkedListCoreUtil.PrintLinkedList(head);*/
+            head = LinkedListCoreUtil.ReverseList(head);
             LinkedListCoreUtil.PrintLinkedList(head);
             Console.ReadLine();
         }

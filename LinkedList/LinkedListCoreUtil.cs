@@ -76,6 +76,28 @@ namespace LinkedList
             }
         }
 
+        public static Node ReverseList(Node head)
+        {
+            if (head == null)
+            {
+                return head;
+            }
+            else
+            {
+                Node prev = null;
+                Node curr = head;
+                Node next = head.next;
+                while (next != null)
+                {
+                    curr.next = prev;
+                    prev = curr;
+                    curr = next;
+                    next = next.next;
+                }
+                curr.next = prev;
+                return curr;
+            }
+        }
         public static void PrintLinkedList(Node head)
         {
             Node cralwer = head;
