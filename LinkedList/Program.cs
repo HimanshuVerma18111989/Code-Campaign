@@ -14,11 +14,16 @@ namespace LinkedList
             head.next = new Node(2, null);
             head.next.next = new Node(3, null);
             LinkedListCoreUtil.PrintLinkedList(head);
-            head = LinkedListCoreUtil.InsertNodeAtStart(0, head);
+            //head = LinkedListCoreUtil.InsertNodeAtStart(0, head);
             Console.WriteLine();
+            //LinkedListCoreUtil.PrintLinkedList(head);
+            //Console.WriteLine();
+            LinkedListCoreUtil.InsertAtEndOfList(100, head);
+            LinkedListCoreUtil.PrintLinkedList(head);
+            head = LinkedListCoreUtil.DeletionOfFrontNode(head);
             LinkedListCoreUtil.PrintLinkedList(head);
             Console.WriteLine();
-            LinkedListCoreUtil.InsertAtEndOfList(100, head);
+            head = LinkedListCoreUtil.DeletionOfLastNode(head);
             LinkedListCoreUtil.PrintLinkedList(head);
             Console.ReadLine();
         }

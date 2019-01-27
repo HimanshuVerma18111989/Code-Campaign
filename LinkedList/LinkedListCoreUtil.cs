@@ -39,6 +39,43 @@ namespace LinkedList
             }
             return head;
         }
+
+        public static Node DeletionOfFrontNode(Node head)
+        {
+            if (head == null)
+            {
+                return head;
+            }
+            else
+            {
+                head = head.next;
+                return head;
+            }
+        }
+
+        public static Node DeletionOfLastNode(Node head)
+        {
+            if (head == null)
+            {
+                return head;
+            }
+            else if (head.next == null)
+            {
+                head = head.next;
+                return head;
+            }
+            else
+            {
+                Node crawler = head;
+                while (crawler.next.next != null)
+                {
+                    crawler = crawler.next;
+                }
+                crawler.next = null;
+                return head;
+            }
+        }
+
         public static void PrintLinkedList(Node head)
         {
             Node cralwer = head;
