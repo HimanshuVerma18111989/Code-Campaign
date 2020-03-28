@@ -98,6 +98,20 @@ namespace LinkedList
                 return curr;
             }
         }
+
+        public static Node ReverseLinkedListRecursively(Node curr, Node prev)
+        {
+            Node rvHead = null;
+            if (curr == null)
+            {
+                return prev;
+            }
+            rvHead = ReverseLinkedListRecursively(curr.next, curr);
+            curr.next = prev;
+            return rvHead != null ? rvHead : null;
+        }
+
+
         public static void PrintLinkedList(Node head)
         {
             Node cralwer = head;
