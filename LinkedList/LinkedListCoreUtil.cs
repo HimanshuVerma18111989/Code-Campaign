@@ -111,6 +111,38 @@ namespace LinkedList
             return rvHead != null ? rvHead : null;
         }
 
+        public static Node FindKthElementFromEnd(Node head, int k)
+        {
+            if (k <= 0)
+            {
+                throw new ArgumentException("k value should be greater than zero");
+            }
+            if (head == null)
+            {
+                return null;
+            }
+            else
+            {
+                int count = 1;
+                Node curr = head;
+                while ((curr != null) && (count <= k))
+                {
+                    curr = curr.next;
+                    count++;
+                }
+                if (count <= k)
+                {
+                    throw new ArgumentException($"k value should not be greater than the length of list");
+                }
+                Node prev = head;
+                while (curr != null)
+                {
+                    prev = prev.next;
+                    curr = curr.next;
+                }
+                return prev;
+            }
+        }
 
         public static void PrintLinkedList(Node head)
         {
