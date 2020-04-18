@@ -144,6 +144,67 @@ namespace LinkedList
             }
         }
 
+        public static Node FindIntersectionOfLists(Node head1, Node head2)
+        {
+            //When one or both of the list is/are null.
+            if ((head1 == null) || (head2 == null))
+            {
+                return null;
+            }
+            else
+            {
+                //Calculating length of both lists.
+                int len1 = ListLength(head1);
+                int len2 = ListLength(head2);
+                //Finding the difference between both of the lists.
+                int diff = len1 - len2;
+                //when first list length is greater than second list length.
+                if (diff > 0)
+                {
+                    while (diff > 0)
+                    {
+                        head1 = head1.next;
+                        diff--;
+                    }
+                }
+                //When second list length is greater than first list length.
+                else if (diff < 0)
+                {
+                    //converting negative value of diff to positive.
+                    diff = Math.Abs(diff);
+                    while (diff > 0)
+                    {
+                        head2 = head2.next;
+                        diff--;
+                    }
+                }
+                //For loop termination conditions
+                /* Condition 1: When there is no intersection between the lists
+                 *      In that head1 and head2 will become null.
+                 * Condition 2: When there is intersection between the lists
+                 *      In that case head1 and head2 will become equal.
+                 */
+                while ((head1 != null) && (head2 != null) && (head1 != head2))
+                {
+                    //Moving head of both lists forward by one step until loop termination conditions are met.
+                    head1 = head1.next;
+                    head2 = head2.next;
+                }
+                //Returning either intersection node or null.
+                return head1 == null ? head1 : head2;
+            }
+        }
+
+        public static int ListLength(Node head)
+        {
+            int len = 0;
+            while (head != null)
+            {
+                len++;
+                head = head.next;
+            }
+            return len;
+        }
         public static void PrintLinkedList(Node head)
         {
             Node cralwer = head;
