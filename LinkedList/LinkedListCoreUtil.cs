@@ -195,6 +195,65 @@ namespace LinkedList
             }
         }
 
+        public static Node AddingTwoLinkedList(Node list1, Node list2, int divider)
+        {
+            //divider is base of number system.
+            //List1 or List2 is null, then return the other list.
+            if ((list1 == null) || (list2 == null))
+            {
+                return list1 == null ? list2 : list1;
+            }
+            else
+            {
+                int carry = 0;
+                int len1 = ListLength(list1);
+                int len2 = ListLength(list2);
+                int diff = len1 - len2;
+                Node retHead = AddingTwoLinkedListUtil(list1, list2, diff, out carry, divider);
+                if (carry > 0)
+                {
+                    Node temp = new Node(carry, null);
+                    temp.next = retHead;
+                    retHead = temp;
+                }
+                return retHead;
+            }
+        }
+        private static Node AddingTwoLinkedListUtil(Node list1, Node list2, int diff, out int carry, int divider)
+        {
+            if ((list1 == null) && (list2 == null))
+            {
+                carry = 0;
+                return null;
+            }
+            if (diff > 0)
+            {
+                Node temp = new Node(0, null);
+                temp.next = AddingTwoLinkedListUtil(list1.next, list2, --diff, out carry, divider);
+                
+                temp.data = (list1.data + carry) % divider;
+                carry = (list1.data + carry) / divider;
+                return temp;
+            }
+            else if (diff < 0)
+            {
+                Node temp = new Node(0, null);
+                temp.next = AddingTwoLinkedListUtil(list1, list2.next, ++diff, out carry, divider);
+
+                temp.data = (list2.data + carry) % divider;
+                carry = (list2.data + carry) / divider;
+                return temp;
+            }
+            else
+            {
+                Node temp = new Node(0, null);
+                temp.next = AddingTwoLinkedListUtil(list1.next, list2.next, diff, out carry, divider);
+
+                temp.data = (list1.data + list2.data + carry) % divider;
+                carry = (carry + list1.data + list2.data) / divider;
+                return temp;
+            }
+        }
         public static int ListLength(Node head)
         {
             int len = 0;

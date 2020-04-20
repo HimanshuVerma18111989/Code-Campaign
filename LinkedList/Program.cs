@@ -32,13 +32,15 @@ namespace LinkedList
             LinkedListCoreUtil.PrintLinkedList(head);*/
             //Node kthNode = LinkedListCoreUtil.FindKthElementFromEnd(head, -1);
             //Console.WriteLine($"{kthNode.data}");
-            Node head2 = new Node(100, null);
-            head2.next = new Node(200, null);
-            head2.next.next = new Node(300, null);
+            Node head2 = new Node(9, null);
+            head2.next = new Node(9, null);
+            head2.next.next = new Node(3, null);
+            head2.next.next.next = new Node(4, null);
+            head2.next.next.next.next = new Node(9, null);
             //head2.next.next.next = head.next;
             LinkedListCoreUtil.PrintLinkedList(head2);
             Console.WriteLine();
-            Node intersect = LinkedListCoreUtil.FindIntersectionOfLists(head, head2);
+            /*Node intersect = LinkedListCoreUtil.FindIntersectionOfLists(head, head2);
             if (intersect != null)
             {
                 Console.WriteLine($"{intersect.data}");
@@ -46,7 +48,9 @@ namespace LinkedList
             else
             {
                 Console.WriteLine("No Intersection found");
-            }
+            }*/
+            Node retHead = LinkedListCoreUtil.AddingTwoLinkedList(head, head2, 10);
+            LinkedListCoreUtil.PrintLinkedList(retHead);
             Console.ReadLine();
         }
     }
